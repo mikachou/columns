@@ -6,7 +6,7 @@ I'm not sure that it still works good. It works on my machine using Linux Mint 1
 
 Here is what I see (and what is supposed to be seen!) when I launch the game :
 
-![alt text](https://github.com/mikachou/columns/blob/main/Columns.jpg?raw=true)
+![Columns](https://github.com/mikachou/columns/blob/main/Columns.png?raw=true)
 
 Push space bar to launch a game and pause it, then use arrow to move the pieces on the screen. Push up arrow to change jewels order on falling stack.
 
