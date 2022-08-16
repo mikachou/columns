@@ -1,0 +1,50 @@
+CE DOSSIER CONTIENT
+
+\Exec		Un executable du jeu Columns et les fichiers sonores
+\Code		Le code source du jeu en Pascal, avec son fichier RES
+\RES		Les ressources graphiques et sonores du jeu, ainsi que le fichier RES
+\Doc		Quelques documents relatifs au programme
+\20090125_1	Une version de test dépassée, sans bitmaps
+
+======================================================================================
+
+correction de bugs le 01.02.2009 :
+
+Dans l'unité ujeu3.pas
+
+1) la réinitilaisation de la variable ATemps (laps de temps pour qu'une pile avance d'une case) a été rajoutée
+dans la procédure CJeu.Derouler
+
+[...]
+
+			New (ADAire, Creer (6, 13, 276, 15, 41, 1, True, 0, 7));
+			New (ADAireAn, Init (ADAire, ASon));
+			New (AApercu, Creer (219, 21, 3, 41, 1, 0));
+			AScore := 0;
+			ANbJoyaux := 0;
+			ANiveau := 0;
+-> ici			ATemps := 1000;
+			NbJoyauxAfficher;
+			AfficherNiveau;
+			AfficherScore;
+			repeat		
+
+[...]
+
+2) Dans la procédure CJeu.Invitation, les instructions DrawString ont été mises hors de la boucle pour éviter le
+scintillement:
+
+[...]
+
+begin
+	ADebut := False;
+	PutImage (10, 276, 15);
+-->	DrawString (285, 250, 'Appuyez sur Espace');
+-->	DrawString (310, 280, 'pour commencer');
+	DrawString (285, 250, 'Appuyez sur Espace');
+	DrawString (310, 280, 'pour commencer');
+	repeat
+
+[...]
+
+On met la commande deux fois pour éviter un laps de temps entre l'affichage des deux parties de la phrase.
