@@ -6,8 +6,12 @@ I'm not sure that it still works good. It works on my machine using Linux Mint 1
 
 Here is what I see (and what is supposed to be seen!) when I launch the game :
 
-![Columns](https://github.com/mikachou/columns/blob/main/Columns.png?raw=true)
+![Columns Start](https://github.com/mikachou/columns/blob/main/Columns-start.png?raw=true)
 
 Push space bar to launch a game and pause it, then use arrow to move the pieces on the screen. Push up arrow to change jewels order on falling stack.
+
+Here is an example of running game :
+
+![Columns Ingame](https://github.com/mikachou/columns/blob/main/Columns-ingame.png?raw=true)
 
 Sounds might not work (?), you can eventually push S-key to switch sounds On/Off.
